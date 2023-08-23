@@ -155,3 +155,7 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.div_video{position:relative; padding-top: 56.25%; height: 0;}
+iframe{position:absolute; left:0; top:0; width: 100%; height: 100%;}
+
