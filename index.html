@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="">
-  <meta name="keywords" content="3D facial animation, Speech-driven, Emotional, Disentanglement">
+  <meta name="keywords" content="3D facial animation, Speech-driven, Emotional">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EmoTalk</title>
 
@@ -256,26 +256,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Speech-driven 3D face animation aims to generate realistic facial expressions 
-            that match the speech content and emotion. However, existing methods often neglect 
-            emotional facial expressions or fail to disentangle them from speech content. 
-            <br>
-            <br>
-            To address this issue, this paper proposes an end-to-end neural network to disentangle 
-            different emotions in speech so as to generate rich 3D facial expressions. Specifically, 
-            we introduce the emotion disentangling encoder (EDE) to disentangle the emotion and 
-            content in the speech by cross-reconstructed speech signals with different emotion labels. 
-            Then an emotion-guided feature fusion decoder is employed to generate a 3D talking face 
-            with enhanced emotion. The decoder is driven by the disentangled identity, emotional, 
-            and content embeddings so as to generate controllable personal and emotional styles. 
-            <br>
-            <br>
-            Finally, considering the scarcity of the 3D emotional talking face data, we resort to 
-            the supervision of facial blendshapes, which enables the reconstruction of plausible 
-            3D faces from 2D emotional data, and contribute a large-scale 3D emotional talking face 
-            dataset (3D-ETF) to train the network. Our experiments and user studies demonstrate 
-            that our approach outperforms state-of-the-art methods and exhibits more diverse facial 
-            movements. We recommend watching the supplementary video.
+            Speech-driven 3D facial animation models are essential for creating human-like avatars that can realistically synchronize their lips to speech. However, it is still difficult to effectively convey a wide range of emotional facial expressions that correspond to the voice. This issue arises due to the lack of clearly labeled datasets for individual emotions as well as insufficient inputs to describe them. To overcome this challenge and make it easier to create expressive avatars, we propose a re-categorization process that reduces the data into four emotional groups: angry, sad, happy, and neutral. We use the re-categorized datasets to estimate style embeddings, which are used to clearly express emotions and control their strength. Additionally, we address the issue of overly smoothed facial expressions caused by error propagation in autoregressive models. To overcome this issue, we develop a non-autoregressive model called EavaNet that employs gated activation units (GAUs) and bidirectional long short-term memory (BLSTM) modules to accurately predict the vertices of a 3D face mesh. Our proposed model outperforms previous state-of-the-art models in terms of emotional expressivity and lip synchronization accuracy in both subjective and objective evaluations.
           </p>
         </div>
       </div>
