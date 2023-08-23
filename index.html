@@ -269,15 +269,11 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Proposed Method</h2>
         <div class="content has-text-justified">
-          <img src="./static/videos/emotalk.png" alt="Italian Trulli">
+          <img src="./static/images/architecture_yj.png" alt="Italian Trulli">
           <p>
             <br>
-            Overview of EmoTalk. Given a speech input <img style="transform: translateY(0.1em); background: white;" src="../emotalk/svg/MlAOibqZtk.svg">
-            , emotional level <img style="transform: translateY(0.1em); background: white;" src="../emotalk/svg/834tL2PhKo.svg">, and personal style 
-            <img style="transform: translateY(0.1em); background: white;" src="../emotalk/svg/d7izxxo4PO.svg"> as inputs,
-             our model disentangles the emotion and content in the speech using two latent spaces. The features extracted from these latent spaces are combined
-              and fed into the emotion-guided feature fusion decoder, which outputs emotion-enhanced blendshape coefficients. These coefficients can be used to
-               animate a FLAME model or rendered as an image sequence.
+            The emotional speech inputs to the audio encoder to model contextual information, then they are downsampled by convolution layers and fed into the GAU by adding style embedding and speaker embedding. The output of GAU is converted to the vertices of 3D face mesh after passing through BLSTM and projection layers. During training, the style embeddings are estimated from the style vertices of the target emotion but not from the target vertices. In the inference process the center of each emotion cluster is used instead. 
+
           </p>
           <!-- <p>
             
